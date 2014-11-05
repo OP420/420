@@ -1,4 +1,4 @@
-# 420
+# 420 ![travis-ci](https://travis-ci.org/mediachicken/420.svg?branch=master)
 This the very first thing I've ever written in Ruby. It's a simple command line program that displays the time until 4:20
 
 ## Installation
