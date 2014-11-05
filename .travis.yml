@@ -4,8 +4,9 @@ rvm:
   - jruby-19mode # JRuby in 1.9 mode
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rake test
+secure: "PQyBjVQlbt9nvWUMNSUiBBydPJzo3yUwloNvxQE1YwGytItB4nRHPYfCZLr9eHtXymCu+7byze+B2Os87zyczW/fqfcvaKK+J1AVx6jRYoaSiqQnZFuG+Brzjzenz5D1/yoBbt+CgA/Xx2BFz+rbNeJsCQ8B1KIfNBzjvGa+4PU="
 deploy:
   provider: rubygems
-  api_key: "298fbc125dabb3cde4ff2d4f8952fc56"
+  api_key: RUBYGEMS_API_KEY
   on:
     tags: true
