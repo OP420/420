@@ -1,0 +1,10 @@
+---
+en:
+  returns:
+    hour: hour
+    hours: hours
+    minute: minute
+    minutes: minutes
+    time: "%s hours and %s minutes until 4:20!"
+    time_minutes: "%s minutes until 4:20!"
+    happy: "Happy 4:20!"

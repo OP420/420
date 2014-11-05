@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require '420'
+FourTwenty.run

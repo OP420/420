@@ -1,0 +1,4 @@
+---
+en:
+  returns:
+    time: "%s hours and %s minutes until 4:20!"
