@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require "thor"
 require "time_diff"
 require 'i18n'
