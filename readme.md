@@ -1,4 +1,4 @@
-# 420 ![travis-ci](https://travis-ci.org/mediachicken/420.svg?branch=master)
+# 420 ![travis-ci](https://travis-ci.org/mediachicken/420.svg?branch=master) [![Code Climate](https://codeclimate.com/github/mediachicken/420/badges/gpa.svg)](https://codeclimate.com/github/mediachicken/420) [![Test Coverage](https://codeclimate.com/github/mediachicken/420/badges/coverage.svg)](https://codeclimate.com/github/mediachicken/420)
 This the very first thing I've ever written in Ruby. It's a simple command line program that displays the time until 4:20
 
 ## Installation
