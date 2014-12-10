@@ -21,7 +21,6 @@ end
 # FourTwenty is the includable ruby module to run the thor app and test
 module FourTwenty
     def self.timeUntil420(time=Time.new)
-
         # This truncates the seconds off the time, to prevent rounding
         time = Time.parse(time.strftime("%H:%M:00"), time)
         time = Time.local(time.year, time.month, time.day, time.strftime("%I"), time.strftime("%M"))
@@ -42,15 +41,17 @@ module FourTwenty
             time_until = Time.diff(time, bowl_times[1])
         end
 
+        # It's minutes until 420
         if time_until[:hour] == 0
             local = I18n.t :time_minutes, :scope => 'returns'
             return local % [time_until[:minute]]
+        # It's hours until 420
         else
             local = I18n.t :time, :scope => 'returns'
             return local % [time_until[:hour], time_until[:minute]]
         end
-
     end
+
     def self.run
         dir = File.dirname(__FILE__)
         I18n.load_path = Dir[dir + '/local/*.yml', dir + '/local/*.rb']
