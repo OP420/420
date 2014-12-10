@@ -20,26 +20,37 @@ end
 
 # FourTwenty is the includable ruby module to run the thor app and test
 module FourTwenty
+    # Check if it is 420
+    def self.is420(time=Time.new)
+        if time.strftime("%I:%M") == "04:20"
+            return true
+        end
+        return false
+    end
+
+    def self.getNextBowlTime(time=Time.new)
+        bowl_times = [Time.local(time.year, time.month, time.day, 4, 20),
+            Time.local(time.year, time.month, time.day, 16, 20)]
+        if time < bowl_times[0]
+            return bowl_times[0]
+        elsif time > bowl_times[0] and time < bowl_times[1]
+            return bowl_times[1]
+        end
+    end
+
+    # Get the time until 420
     def self.timeUntil420(time=Time.new)
         # This truncates the seconds off the time, to prevent rounding
         time = Time.parse(time.strftime("%H:%M:00"), time)
         time = Time.local(time.year, time.month, time.day, time.strftime("%I"), time.strftime("%M"))
 
-        bowl_times = [Time.local(time.year, time.month, time.day, 4, 20),
-            Time.local(time.year, time.month, time.day, 16, 20)]
-
         # This means it's exactly 420!
-        if time.strftime("%I:%M") == "04:20"
+        if self.is420(time)
             local = I18n.t :happy, :scope => 'returns'
             return local
-
-        # This means it's before 4:20am.
-        elsif time < bowl_times[0]
-            time_until = Time.diff(time, bowl_times[0])
-        # This means it's passed 4:20am.
-        elsif time > bowl_times[0] and time < bowl_times[1]
-            time_until = Time.diff(time, bowl_times[1])
         end
+
+        time_until = Time.diff(time, self.getNextBowlTime(time))
 
         # It's minutes until 420
         if time_until[:hour] == 0
