@@ -37,24 +37,17 @@ module FourTwenty
         # This means it's before 4:20am.
         elsif time < bowl_times[0]
             time_until = Time.diff(time, bowl_times[0])
-            if time_until[:hour] == 0
-                local = I18n.t :time_minutes, :scope => 'returns'
-                return local % [time_until[:minute]]
-            else
-                local = I18n.t :time, :scope => 'returns'
-                return local % [time_until[:hour], time_until[:minute]]
-            end
-
         # This means it's passed 4:20am.
         elsif time > bowl_times[0] and time < bowl_times[1]
             time_until = Time.diff(time, bowl_times[1])
-            if time_until[:hour] == 0
-                local = I18n.t :time_minutes, :scope => 'returns'
-                return local % [time_until[:minute]]
-            else
-                local = I18n.t :time, :scope => 'returns'
-                return local % [time_until[:hour], time_until[:minute]]
-            end
+        end
+
+        if time_until[:hour] == 0
+            local = I18n.t :time_minutes, :scope => 'returns'
+            return local % [time_until[:minute]]
+        else
+            local = I18n.t :time, :scope => 'returns'
+            return local % [time_until[:hour], time_until[:minute]]
         end
 
     end
