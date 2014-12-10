@@ -45,12 +45,12 @@ module FourTwenty
         time = Time.local(time.year, time.month, time.day, time.strftime("%I"), time.strftime("%M"))
 
         # This means it's exactly 420!
-        if self.is420(time)
+        if is420(time)
             local = I18n.t :happy, :scope => 'returns'
             return local
         end
 
-        time_until = Time.diff(time, self.getNextBowlTime(time))
+        time_until = Time.diff(time, getNextBowlTime(time))
 
         # It's minutes until 420
         if time_until[:hour] == 0
