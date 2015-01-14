@@ -2,9 +2,9 @@
 This the very first thing I've ever written in Ruby. It's a simple command line program that displays the time until 4:20
 
 ## Installation
-You can install 420 by installing the `420-time` gem.
+You can install 420 by installing the `fourtwenty` gem. (previously `420-time`)
 
-    $ gem install 420-time
+    $ gem install fourtwenty
 
 ## Usage
 run `420` from command line to show the time left until the next 4:20.
