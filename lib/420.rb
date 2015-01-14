@@ -66,6 +66,7 @@ module FourTwenty
     def self.run
         dir = File.dirname(__FILE__)
         I18n.load_path = Dir[dir + '/local/*.yml', dir + '/local/*.rb']
+        I18n.enforce_available_locales = false
         puts App.start
     end
     def self.run_from_time(args)
