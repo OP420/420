@@ -1,4 +1,4 @@
-# 420 ![travis-ci](https://travis-ci.org/mediachicken/420.svg?branch=master) [![Code Climate](https://codeclimate.com/github/mediachicken/420/badges/gpa.svg)](https://codeclimate.com/github/mediachicken/420) [![Test Coverage](https://codeclimate.com/github/mediachicken/420/badges/coverage.svg)](https://codeclimate.com/github/mediachicken/420)
+# 420 ![travis-ci](https://travis-ci.org/mediachicken/420.svg?branch=master) [![Code Climate](https://codeclimate.com/github/mediachicken/420/badges/gpa.svg)](https://codeclimate.com/github/mediachicken/420) [![Test Coverage](https://codeclimate.com/github/mediachicken/420/badges/coverage.svg)](https://codeclimate.com/github/mediachicken/420) [![420-time ruby gem](http://ruby-gem-downloads-badge.herokuapp.com/420-time?type=total&color=brightgreen)](https://rubygems.org/gems/420-time)
 This the very first thing I've ever written in Ruby. It's a simple command line program that displays the time until 4:20
 
 ## Installation
